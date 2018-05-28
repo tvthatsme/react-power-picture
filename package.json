@@ -1,0 +1,53 @@
+{
+  "name": "react-power-picture",
+  "version": "0.0.1",
+  "description": "A React component for rendering images both resposively and progressively",
+  "keywords": [
+    "react",
+    "responsive",
+    "progressive",
+    "images",
+    "loading",
+    "performance"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "scripts": {
+    "test": "CI=1 react-scripts test --env=jsdom",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "prepublish": "npm run build",
+    "predeploy": "cd example && npm install && npm run build",
+    "deploy": "gh-pages -d example/build"
+  },
+  "repository": "https://github.com/tvthatsme/react-power-picture.git",
+  "author": "Timothy Vernon <timothy.n.vernon@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^15.0.0-0 || ^16.0.0-0",
+    "react-dom": "^15.0.0-0 || ^16.0.0-0"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "gh-pages": "^1.1.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "^1.1.4",
+    "rollup": "^0.59.3",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.1.1",
+    "rollup-plugin-url": "^1.4.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
