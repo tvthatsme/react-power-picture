@@ -4,9 +4,11 @@ Thanks for being willing to contribute!
 
 ## Project Setup
 
-First of all fork and clone the repo
+First of all fork and clone the repo :smile:
 
-```
+Next run these commands in two terminal tabs:
+
+```console
 # run example to start developing your new component against
 npm link # the link commands are important for local development
 npm install # disregard any warnings about missing peer dependencies
