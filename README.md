@@ -21,7 +21,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import PowerPicture from 'react-power-picture';
 
-sources = [
+const sources = [
   {
     size: 400,
     src: 'https://source.unsplash.com/random/200x140'
@@ -48,6 +48,18 @@ render(
   document.getElementById('root')
 );
 ```
+
+<PowerPicture /> is the only component. It doesn't render anything itself, it just calls the render function and renders that. Use this to create anything you'd like to!
+
+## Props
+
+### sources
+
+An array of objects, each one with a `size` and `src` key, value pair. React Power Picture uses this source map and the windows width to determine the optimal image to load given the number of object that the prop provides.
+
+### onError (optional)
+
+Optional callback method that is triggered if there is an error loading the image.
 
 ## Examples
 
