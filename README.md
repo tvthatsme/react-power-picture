@@ -16,6 +16,8 @@ npm install --save react-power-picture
 
 ## Usage
 
+[![Edit v06l97zxyy](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v06l97zxyy)
+
 ```jsx
 import React from 'react';
 import { render } from 'react-dom';
