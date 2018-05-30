@@ -1,7 +1,8 @@
 {
   "name": "react-power-picture",
   "version": "0.0.1",
-  "description": "A React component for rendering images both resposively and progressively",
+  "description":
+    "A React component for rendering images both resposively and progressively",
   "keywords": [
     "react",
     "responsive",
@@ -47,7 +48,5 @@
     "rollup-plugin-peer-deps-external": "^2.1.1",
     "rollup-plugin-url": "^1.4.0"
   },
-  "files": [
-    "dist"
-  ]
+  "files": ["dist"]
 }
