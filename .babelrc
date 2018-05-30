@@ -9,5 +9,6 @@
     "stage-0",
     "react"
   ],
+  "comments": false,
   "plugins": ["external-helpers"]
 }
