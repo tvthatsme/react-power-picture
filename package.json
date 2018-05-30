@@ -8,8 +8,10 @@
     "responsive",
     "progressive",
     "images",
+    "picture",
     "loading",
-    "performance"
+    "performance",
+    "render-props"
   ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",

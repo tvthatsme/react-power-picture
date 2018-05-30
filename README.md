@@ -1,6 +1,6 @@
 # React Power Picture
 
-Render images in your React application that take advantage of progressive loading as well as responsive sizing.
+Render images in your React application that take advantage of progressive loading as well as responsive sizing. Serviced by a render prop for excellent integration with all your projects.
 
 ## Installation
 
@@ -21,7 +21,32 @@ import React from 'react';
 import { render } from 'react-dom';
 import PowerPicture from 'react-power-picture';
 
-render(<PowerPicture />, document.getElementById('root'));
+sources = [
+  {
+    size: 400,
+    src: 'https://source.unsplash.com/random/200x140'
+  },
+  {
+    size: 800,
+    src: 'https://source.unsplash.com/random/300x200'
+  },
+  {
+    size: 1200,
+    src: 'https://source.unsplash.com/random/400x300'
+  }
+];
+
+render(
+  <PowerPicture sources={sources}>
+    {(image, loading) => (
+      <div>
+        <p>Loading state: {loading.toString()}</p>
+        <img alt="A p!cture is worth a thousand words" src={image} />
+      </div>
+    )}
+  </PowerPicture>,
+  document.getElementById('root')
+);
 ```
 
 ## Examples
