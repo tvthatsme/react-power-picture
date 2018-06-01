@@ -1,6 +1,7 @@
 # React Power Picture
 
 [![Build Status](https://travis-ci.org/tvthatsme/react-power-picture.svg?branch=master)](https://travis-ci.org/tvthatsme/react-power-picture)
+[![Coverage Status](https://coveralls.io/repos/github/tvthatsme/react-power-picture/badge.svg?branch=master)](https://coveralls.io/github/tvthatsme/react-power-picture?branch=master)
 
 Render images in your React application that take advantage of progressive loading as well as responsive sizing. Serviced by a render prop for excellent integration with all your projects.
 
