@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PowerPicture Component Renders a snapshot that is good 1`] = `
+<div
+  className="text-center"
+>
+  <img
+    alt="description"
+    src="https://source.unsplash.com/random/20x10"
+  />
+</div>
+`;
