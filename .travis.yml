@@ -1,8 +1,19 @@
 language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
 node_js:
-  - "8"
-  - "6"
-dist: trusty # needs Ubuntu Trusty
-sudo: false  # no need for virtualization
+  - '9'
+  - '8'
+  - '6'
+dist: trusty
+sudo: false
 script:
   - yarn test
+after_success:
+  - npm run travis-deploy-once "npm run semantic-release"
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
