@@ -19,6 +19,11 @@ class PowerPicture extends Component {
    */
   componentDidMount() {
     const { sources } = this.props;
+
+    if (sources === undefined) {
+      throw new Error(`PowerPicture requires sources as a prop`);
+    }
+
     const imgToLoad = this.getIdealSize(sources, window.innerWidth);
     this.loadImage(imgToLoad);
   }
@@ -40,11 +45,11 @@ class PowerPicture extends Component {
    * @param {Object} prevState state of component before update
    */
   componentDidUpdate(prevProps, prevState) {
-    const { sources, placeholder } = this.props;
+    const { sources } = this.props;
     const imgToLoad = this.getIdealSize(sources, window.innerWidth);
 
     if (prevState.image !== null && imgToLoad !== prevState.image) {
-      this.setState({ image: placeholder, loading: true }, () => {
+      this.setState({ loading: true }, () => {
         this.loadImage(imgToLoad);
       });
     }
