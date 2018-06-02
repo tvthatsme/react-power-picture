@@ -1,8 +1,7 @@
 {
   "name": "react-power-picture",
   "version": "0.0.0-development",
-  "description":
-    "A React component for rendering images both resposively and progressively",
+  "description": "A React component for rendering images both resposively and progressively",
   "keywords": [
     "react",
     "responsive",
@@ -17,7 +16,8 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "scripts": {
-    "test": "CI=1 react-scripts test --env=jsdom",
+    "commit": "git-cz",
+    "test": "CI=1 react-scripts test --env=jsdom --coverage",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepublish": "npm run build",
@@ -41,7 +41,9 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "codecov.io": "^0.1.6",
+    "commitizen": "^2.10.1",
+    "coveralls": "^3.0.1",
+    "cz-conventional-changelog": "^2.1.0",
     "gh-pages": "^1.1.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -56,5 +58,10 @@
     "semantic-release": "^15.5.0",
     "travis-deploy-once": "^5.0.0"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ],
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
