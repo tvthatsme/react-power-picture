@@ -1,6 +1,6 @@
 {
   "name": "react-power-picture",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "A React component for rendering images both resposively and progressively",
   "keywords": [
     "react",
@@ -16,12 +16,15 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "scripts": {
-    "test": "CI=1 react-scripts test --env=jsdom",
+    "commit": "git-cz",
+    "test": "CI=1 react-scripts test --env=jsdom --coverage",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepublish": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": "https://github.com/tvthatsme/react-power-picture.git",
   "author": "Timothy Vernon <timothy.n.vernon@gmail.com>",
@@ -38,6 +41,9 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "commitizen": "^2.10.1",
+    "coveralls": "^3.0.1",
+    "cz-conventional-changelog": "^2.1.0",
     "gh-pages": "^1.1.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -48,9 +54,14 @@
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.1.1",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "semantic-release": "^15.5.0",
+    "travis-deploy-once": "^5.0.0"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
