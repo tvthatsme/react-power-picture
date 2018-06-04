@@ -79,7 +79,7 @@ This project has been heavily inspired by the work of Formidable Labs and their 
 
 Another shoutout to the [react-simple-image](https://github.com/bitjourney/react-simple-image) library. This project has everything for responsive images loaded as a `srcset` but with much broader prop support and less render flexibiliy.
 
-You might consider React Power Picture to be a marriage of the two. My goad for this library to provide both progressive and responsive power.
+You might consider React Power Picture to be a marriage of the two. My goal for this library to provide both progressive and responsive power.
 
 ## License
 
