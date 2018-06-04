@@ -1,7 +1,8 @@
 {
   "name": "react-power-picture",
   "version": "0.0.0-development",
-  "description": "A React component for rendering images both resposively and progressively",
+  "description":
+    "A React component for rendering images both resposively and progressively",
   "keywords": [
     "react",
     "responsive",
@@ -31,7 +32,7 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "^15.0.0-0 || ^16.0.0-0",
-    "react-dom": "^15.0.0-0 || ^16.0.0-0"
+    "prop-types": "^15.6.1"
   },
   "sideEffects": false,
   "devDependencies": {
@@ -45,6 +46,7 @@
     "coveralls": "^3.0.1",
     "cz-conventional-changelog": "^2.1.0",
     "gh-pages": "^1.1.0",
+    "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "^1.1.4",
@@ -58,9 +60,7 @@
     "semantic-release": "^15.5.0",
     "travis-deploy-once": "^5.0.0"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
   }

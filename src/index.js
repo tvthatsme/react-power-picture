@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class PowerPicture extends Component {
+  static propTypes = {
+    sources: PropTypes.arrayOf(
+      PropTypes.shape({
+        src: PropTypes.string,
+        size: PropTypes.number
+      })
+    ).isRequired,
+    onError: PropTypes.func,
+    children: PropTypes.func
+  };
+
   constructor(props) {
     super(props);
 
