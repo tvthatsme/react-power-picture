@@ -12,7 +12,8 @@ sudo: false
 script:
   - yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 after_success:
-  - npm run travis-deploy-once "npm run semantic-release"
+  - npm run travis-deploy-once
+  - npm run semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
