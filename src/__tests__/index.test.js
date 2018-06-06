@@ -26,6 +26,86 @@ describe('PowerPicture Component', () => {
     expect(comp).toMatchSnapshot();
   });
 
+  it('Accepts a single source as a parameter', () => {
+    const _error = console.error;
+    console.error = jest.fn(() => {});
+    try {
+      expect(() => {
+        renderer.create(
+          <PowerPicture sources={defaultSrcs}>
+            {image => <img alt="description" src={image} />}
+          </PowerPicture>
+        );
+      }).not.toThrow(
+        `PowerPicture requires either \'source\' or \'sources\' as a prop`
+      );
+    } finally {
+      console.error = _error;
+    }
+  });
+
+  it('Accepts an array of sources as a parameter', () => {
+    const _error = console.error;
+    console.error = jest.fn(() => {});
+    try {
+      expect(() => {
+        renderer.create(
+          <PowerPicture source="some-image.png">
+            {image => <img alt="description" src={image} />}
+          </PowerPicture>
+        );
+      }).not.toThrow(
+        `PowerPicture requires either \'source\' or \'sources\' as a prop`
+      );
+    } finally {
+      console.error = _error;
+    }
+  });
+
+  it('Throws if not provided any sources', () => {
+    const _error = console.error;
+    console.error = jest.fn(() => {});
+    try {
+      expect(() => {
+        renderer.create(
+          <PowerPicture>
+            {image => (
+              <div className="text-center">
+                <img alt="description" src={image} />
+              </div>
+            )}
+          </PowerPicture>
+        );
+      }).toThrow(
+        `PowerPicture requires either \'source\' or \'sources\' as a prop`
+      );
+    } finally {
+      console.error = _error;
+    }
+  });
+
+  it('Throws if provided too many types of sources', () => {
+    const _error = console.error;
+    console.error = jest.fn(() => {});
+    try {
+      expect(() => {
+        renderer.create(
+          <PowerPicture source="some-src.png" sources={defaultSrcs}>
+            {image => (
+              <div className="text-center">
+                <img alt="description" src={image} />
+              </div>
+            )}
+          </PowerPicture>
+        );
+      }).toThrow(
+        `PowerPicture requires ONE prop of either \'source\' or \'sources\' but cannot accept both`
+      );
+    } finally {
+      console.error = _error;
+    }
+  });
+
   it('Starts with loading equals true', () => {
     let result = null;
     const comp = renderer.create(
@@ -53,26 +133,6 @@ describe('PowerPicture Component', () => {
           </PowerPicture>
         );
       }).toThrow(`PowerPicture requires a function as its only child`);
-    } finally {
-      console.error = _error;
-    }
-  });
-
-  it('Throws if not provided any sources', () => {
-    const _error = console.error;
-    console.error = jest.fn(() => {});
-    try {
-      expect(() => {
-        renderer.create(
-          <PowerPicture>
-            {image => (
-              <div className="text-center">
-                <img alt="description" src={image} />
-              </div>
-            )}
-          </PowerPicture>
-        );
-      }).toThrow(`PowerPicture requires sources as a prop`);
     } finally {
       console.error = _error;
     }
