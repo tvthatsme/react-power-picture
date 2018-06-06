@@ -7,6 +7,10 @@ build
 dist
 coverage
 
+# dont track the example lock files
+example/package-lock.json
+example/yarn.lock
+
 # misc
 .DS_Store
 .env
