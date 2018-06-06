@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 
 class PowerPicture extends Component {
   static propTypes = {
+    source: PropTypes.string,
     sources: PropTypes.arrayOf(
       PropTypes.shape({
         src: PropTypes.string,
         size: PropTypes.number
       })
-    ).isRequired,
+    ),
     onError: PropTypes.func,
     children: PropTypes.func
   };
@@ -18,6 +19,10 @@ class PowerPicture extends Component {
 
     // define an internal variable for the image that will be loaded
     this.image = null;
+
+    // define error messages
+    this.ERROR_TOO_MANY_SOURCES = `PowerPicture requires ONE prop of either \'source\' or \'sources\' but cannot accept both`;
+    this.ERROR_MISSING_SOURCE = `PowerPicture requires either \'source\' or \'sources\' as a prop`;
 
     // define the component state
     this.state = {
@@ -30,13 +35,20 @@ class PowerPicture extends Component {
    * Start loading the right image once the component mounts
    */
   componentDidMount() {
-    const { sources } = this.props;
+    const { source, sources } = this.props;
+    let imgToLoad;
 
-    if (sources === undefined) {
-      throw new Error(`PowerPicture requires sources as a prop`);
+    if (sources) {
+      if (source) {
+        throw new Error(this.ERROR_TOO_MANY_SOURCES);
+      }
+      imgToLoad = this.getIdealSize(sources, window.innerWidth);
+    } else if (source) {
+      imgToLoad = source;
+    } else {
+      throw new Error(this.ERROR_MISSING_SOURCE);
     }
 
-    const imgToLoad = this.getIdealSize(sources, window.innerWidth);
     this.loadImage(imgToLoad);
   }
 
@@ -57,13 +69,25 @@ class PowerPicture extends Component {
    * @param {Object} prevState state of component before update
    */
   componentDidUpdate(prevProps, prevState) {
-    const { sources } = this.props;
-    const imgToLoad = this.getIdealSize(sources, window.innerWidth);
+    const { source, sources } = this.props;
 
+    // default to source (which may be undefined)
+    let imgToLoad = source;
+
+    // get the image to load from sources (if defined)
+    if (sources) {
+      imgToLoad = this.getIdealSize(sources, window.innerWidth);
+    }
+
+    // If the img source changed, reset PowerPicture back to the default state
     if (prevState.image !== null && imgToLoad !== prevState.image) {
-      this.setState({ loading: true }, () => {
-        this.loadImage(imgToLoad);
-      });
+      this.setState(
+        {
+          image: null,
+          loading: true
+        },
+        () => this.loadImage(imgToLoad)
+      );
     }
   }
 

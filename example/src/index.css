@@ -1,5 +1,5 @@
 body {
-  background-color: #ecf0f1;
+  background-color: #fff;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -7,6 +7,7 @@ body {
   font-size: 2.5rem;
   color: #34495e;
   text-align: center;
+  font-weight: 800;
 }
 
 .center {
@@ -18,4 +19,36 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.toggle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn {
+  border: 2px solid #34495e;
+  border-radius: 50px;
+  padding: 5px 12px;
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
+.btn--selected {
+  color: #fff;
+  background-color: #2ecc71;
+  border: 2px solid #27ae60;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
 }
