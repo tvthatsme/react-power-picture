@@ -5,8 +5,17 @@
 [![npm version](https://badge.fury.io/js/react-power-picture.svg)](https://badge.fury.io/js/react-power-picture)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
 Render images in your React application that take advantage of progressive loading as well as responsive sizing. Serviced by a render prop for excellent integration with all your projects.
+
+## The problem
+
+You don't want to load huge images for mobile users but mapping everything in image srcset
+is verbose. You also want to be able to track the loading state of the image so that you
+can apply styles for a smooth user interface.
+
+## This solution
+
+This is a component that handles all the `srcset` and responsive image setup for you while keeping track of `loading` state so that you can worry about making the rest of your page load fast. It uses a [render prop](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce) which gives you maximum flexibility with a minimal API because you are responsible for the rendering of everything and you simply apply props to what you're rendering. Use this component together with your own taste in styles to acheive effects like [Medium's Blur Effect](https://jmperezperez.com/medium-image-progressive-loading-placeholder/). The implementation is up to you! The heavy lifting (not so heavy actually...) is up to us.
 
 ## Installation
 
@@ -61,13 +70,13 @@ render(
 
 ## Props
 
-### sources
+<!-- This table was generated via http://www.tablesgenerator.com/markdown_tables -->
 
-An array of objects, each one with a `size` and `src` key, value pair. React Power Picture uses this source map and the windows width to determine the optimal image to load given the number of object that the prop provides.
-
-### onError (optional)
-
-Optional callback method that is triggered if there is an error loading the image.
+| prop      | type     | description                                                                                                                                                                                                                     |
+| --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sources` | array    | An array of objects, each one with a `size` and `src` key, value pair. React Power Picture uses this source map and the windows width to determine the optimal image to load given the number of object that the prop provides. |
+| `source`  | string   | A url string for an image. Use this prop if you only have one image size for all device sizes.                                                                                                                                  |
+| `onError` | function | Optional callback method that is triggered if there is an error loading the image.                                                                                                                                              |
 
 ## Examples
 
