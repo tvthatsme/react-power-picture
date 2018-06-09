@@ -16,7 +16,7 @@ npm start # runs rollup with watch flag
 
 # (in another tab, run the example create-react-app)
 cd example
-npm link react-poop-emoji
+npm link react-power-picture
 npm install
 npm start # runs create-react-app hot-reload dev server
 ```
