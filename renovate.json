@@ -1,5 +1,5 @@
 {
-  "assignees": "tvthatsme",
+  "assignees": ["tvthatsme"],
   "extends": [
     "config:base"
   ],
