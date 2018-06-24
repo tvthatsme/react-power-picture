@@ -5,7 +5,7 @@
 [![npm version](https://badge.fury.io/js/react-power-picture.svg)](https://badge.fury.io/js/react-power-picture)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Render images in your React application that take advantage of progressive loading as well as responsive sizing. Serviced by a render prop for excellent integration with all your projects.
+Zero-dependency React component for progressively loading your images with as much responsiveness as you need. All the power is given to you for extending or wrapping to meet your use case. Serviced by a render prop for excellent integration with all your projects.
 
 ## The problem
 
@@ -84,11 +84,26 @@ A live example of this in action can be found on the [project's GitHub page](htt
 
 ## Inspiration
 
-This project has been heavily inspired by the work of Formidable Labs and their [react-progressive-image](https://github.com/FormidableLabs/react-progressive-image) library. It does many things exactly right but did not provide the responsive solution that I was originally looking for.
+This project has been heavily inspired by the work of Formidable Labs and their [react-progressive-image](https://github.com/FormidableLabs/react-progressive-image) library. It does many things exactly right but did not provide the responsive solution (`srcset`) that I was originally looking for.
 
 Another shoutout to the [react-simple-image](https://github.com/bitjourney/react-simple-image) library. This project has everything for responsive images loaded as a `srcset` but with much broader prop support and less render flexibiliy.
 
 You might consider React Power Picture to be a marriage of the two. My goal for this library to provide both progressive and responsive power.
+
+## Other solutions
+
+There are many other React image-related components that you might want to consider before choosing `react-power-picture`. They all have different use cases, and many of them make opinionated choices in dependencies and/or peer-dependencies. This library will always take the approach of simplicity and flexibility over extended functionality. Do one thing and do it well. If you want to wrap or extend `react-power-picture` with extra functionality such as network speed detection, element in view, or other features, please extend this work or take a look at the following similar solutions.
+
+- [react-progressive-image](https://github.com/FormidableLabs/react-progressive-image)
+- [react-lazyload](https://github.com/jasonslyvia/react-lazyload)
+- [react-lazy-image](https://github.com/sergiodxa/react-lazy-image)
+- [react-image](https://github.com/mbrevda/react-image)
+- [react-lazy-load](https://github.com/loktar00/react-lazy-load)
+- [react-graceful-image](https://github.com/linasmnew/react-graceful-image)
+- [react-worker-image](https://github.com/nitish24p/react-worker-image)
+- [react-simple-image](https://github.com/bitjourney/react-simple-image)
+
+If you know of more, please feel free to raise a PR :smile:
 
 ## License
 
