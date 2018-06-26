@@ -21,8 +21,8 @@ class PowerPicture extends Component {
     this.image = null;
 
     // define error messages
-    this.ERROR_TOO_MANY_SOURCES = `PowerPicture requires ONE prop of either \'source\' or \'sources\' but cannot accept both`;
-    this.ERROR_MISSING_SOURCE = `PowerPicture requires either \'source\' or \'sources\' as a prop`;
+    this.ERROR_TOO_MANY_SOURCES = `PowerPicture requires ONE prop of either 'source' or 'sources' but cannot accept both`;
+    this.ERROR_MISSING_SOURCE = `PowerPicture requires either 'source' or 'sources' as a prop`;
 
     // define the component state
     this.state = {
