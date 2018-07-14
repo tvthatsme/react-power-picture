@@ -56,8 +56,8 @@
     "rollup-plugin-node-resolve": "3.3.0",
     "rollup-plugin-peer-deps-external": "2.2.0",
     "rollup-plugin-url": "1.4.0",
-    "semantic-release": "^15.7.1",
-    "travis-deploy-once": "^5.0.1"
+    "semantic-release": "15.7.1",
+    "travis-deploy-once": "5.0.1"
   },
   "files": [
     "dist"
