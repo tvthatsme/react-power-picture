@@ -57,7 +57,7 @@
     "rollup-plugin-peer-deps-external": "2.2.0",
     "rollup-plugin-url": "1.4.0",
     "semantic-release": "15.9.3",
-    "travis-deploy-once": "5.0.1"
+    "travis-deploy-once": "5.0.2"
   },
   "files": [
     "dist"
