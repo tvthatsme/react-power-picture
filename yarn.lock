@@ -2650,9 +2650,9 @@ commander@2.15.1, commander@2.15.x, commander@^2.11.0, commander@~2.15.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
-commitizen@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/commitizen/-/commitizen-3.0.2.tgz#8af8d943c9b97a6a9523d824c654660a43138179"
+commitizen@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/commitizen/-/commitizen-3.0.4.tgz#557904e15cc0641d5b7cdcba2f3e74ef3b693d79"
   dependencies:
     cachedir "2.1.0"
     cz-conventional-changelog "2.1.0"
