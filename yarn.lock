@@ -8889,9 +8889,9 @@ rollup-plugin-peer-deps-external@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-peer-deps-external/-/rollup-plugin-peer-deps-external-2.2.0.tgz#99ef9231aa01736f3e9605b7c3084a0d627f665b"
 
-rollup-plugin-url@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-url/-/rollup-plugin-url-2.0.1.tgz#d6481321e05196c37a48ac576a07ff212dd02742"
+rollup-plugin-url@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-url/-/rollup-plugin-url-2.1.0.tgz#c06be791dfee1b9f5e0854a94cc6bb3dc2743bc0"
   dependencies:
     mime "^2.3.1"
     mkpath "^1.0.0"
